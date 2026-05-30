@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Galliano's Pizza — independent takeaway · 75 Lynn Road, Gaywood, King's Lynn</title>
+<meta name="description" content="Independent pizza takeaway in Gaywood, King's Lynn — over 30 years. Fresh dough made daily on the premises. Deep pan as standard. Gluten-free available. Call 01553 761812." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap">
+<style>
+:root{
+  --paper:#F4E4BC;
+  --paper-deep:#E8D5A4;
+  --paper-soft:#FBF1D6;
+  --ink:#1A0F0A;
+  --ink-soft:#3A2418;
+  --brick:#8B3A3A;
+  --brick-deep:#5E2424;
+  --brick-bright:#A8442E;
+  --cheese:#E1A93C;
+  --char:#241511;
+  --rule:rgba(26,15,10,.16);
+  --font-display:"Big Shoulders Display",ui-sans-serif,Impact,sans-serif;
+  --font-body:"Lora",ui-serif,Georgia,serif;
+  --rhythm:clamp(1rem,.55rem + .9vw,1.18rem);
+  --gutter:clamp(1.1rem,3vw,2.4rem);
+  --column:min(1180px,100% - var(--gutter)*2);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--font-body);font-size:var(--rhythm);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+/* warm paper grain */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:2;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='260' height='260'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .14  0 0 0 0 .09  0 0 0 0 .04  0 0 0 .5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  opacity:.35;mix-blend-mode:multiply;
+}
+a{color:inherit}
+img,iframe{max-width:100%;display:block}
+h1,h2,h3,h4{
+  font-family:var(--font-display);
+  font-weight:800;line-height:.9;letter-spacing:-.005em;
+  text-transform:uppercase;
+  text-wrap:balance;margin:0;
+}
+p{text-wrap:pretty;hyphens:auto}
+
+/* ─── top bar ───────────────────────────────────────────────── */
+.topbar{
+  position:sticky;top:0;z-index:30;
+  background:linear-gradient(to bottom,var(--paper) 82%,transparent);
+  backdrop-filter:saturate(120%);
+}
+.topbar__inner{
+  width:var(--column);margin-inline:auto;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.85rem 0 .9rem;
+  font-family:var(--font-display);
+  font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+}
+.topbar__addr{color:var(--ink-soft);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+.topbar__addr b{font-weight:800;color:var(--ink)}
+.topbar__addr .dot{width:.32rem;height:.32rem;border-radius:50%;background:var(--brick);display:inline-block}
+.tel-pill{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.5rem .95rem .5rem .7rem;
+  border:1.5px solid var(--ink);border-radius:999px;
+  font-weight:800;letter-spacing:.1em;
+  background:var(--ink);color:var(--paper);
+  text-decoration:none;font-size:.78rem;
+  transition:background .15s,color .15s;
+}
+.tel-pill::before{
+  content:"";width:.55rem;height:.55rem;border-radius:50%;
+  background:var(--cheese);box-shadow:0 0 0 4px rgba(225,169,60,.25);
+  animation:beat 2.4s ease-in-out infinite;
+}
+.tel-pill:hover{background:var(--brick);border-color:var(--brick)}
+@keyframes beat{50%{transform:scale(1.3);box-shadow:0 0 0 7px rgba(225,169,60,.08)}}
+
+/* ─── hero ──────────────────────────────────────────────────── */
+.hero{
+  width:var(--column);margin-inline:auto;
+  padding-block:clamp(1.4rem,4vw,3.4rem) clamp(2rem,5vw,4.2rem);
+  position:relative;
+}
+.hero__est{
+  font-family:var(--font-display);text-transform:uppercase;
+  letter-spacing:.32em;font-size:.74rem;font-weight:700;
+  color:var(--brick);
+  display:flex;align-items:center;gap:.85rem;margin-bottom:1.2rem;
+}
+.hero__est::before,.hero__est::after{
+  content:"";flex:0 1 4.5rem;height:1.5px;background:var(--brick);
+}
+.hero__est::after{flex:1}
+.hero__name{
+  font-size:clamp(4.6rem,17vw,15rem);
+  font-weight:900;line-height:.82;letter-spacing:-.022em;
+  color:var(--ink);
+  margin:0 0 .35rem;
+  display:block;
+}
+.hero__name .apos{color:var(--brick);}
+.hero__stamp{
+  display:inline-flex;align-items:center;gap:1.2rem;
+  margin-top:.3rem;margin-bottom:1.5rem;
+}
+.hero__stamp .pizza{
+  display:inline-block;
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.8rem,4.5vw,3.4rem);
+  letter-spacing:.42em;text-transform:uppercase;
+  padding:.42rem 1.4rem .35rem 1.85rem;
+  border:3px solid var(--ink);
+  color:var(--ink);
+  transform:rotate(-1.3deg);
+  background:var(--paper-soft);
+  box-shadow:5px 5px 0 var(--brick);
+}
+.hero__stamp .gv{
+  font-family:var(--font-body);font-style:italic;font-weight:500;
+  font-size:clamp(.9rem,1.6vw,1.05rem);
+  color:var(--ink-soft);max-width:18rem;line-height:1.45;
+}
+.hero__tagline{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:1.2rem;
+  margin-top:2.4rem;
+  border-top:1.5px solid var(--ink);
+  padding-top:1.4rem;
+}
+.hero__tagline > div{
+  font-family:var(--font-display);font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;
+  font-size:clamp(1.05rem,2vw,1.45rem);
+  line-height:1.05;color:var(--ink);
+}
+.hero__tagline > div span{display:block;font-family:var(--font-body);font-weight:400;text-transform:none;letter-spacing:0;font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-top:.5rem;line-height:1.5}
+.hero__cta{
+  display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;margin-top:2.4rem;
+}
+.btn{
+  display:inline-flex;align-items:center;gap:.65rem;
+  padding:1.05rem 1.85rem;border-radius:999px;
+  font-family:var(--font-display);font-weight:800;
+  text-transform:uppercase;letter-spacing:.13em;font-size:.92rem;
+  text-decoration:none;
+  transition:transform .18s,box-shadow .18s,background .18s;
+}
+.btn--primary{background:var(--ink);color:var(--paper);}
+.btn--primary:hover{background:var(--brick);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}
+.btn--ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:var(--paper)}
+.btn .arrow{display:inline-block;transition:transform .2s}
+.btn:hover .arrow{transform:translateX(4px)}
+
+/* ─── marquee ───────────────────────────────────────────────── */
+.marquee{
+  background:var(--ink);color:var(--paper);
+  border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);
+  overflow:hidden;position:relative;
+  padding-block:.9rem;
+}
+.marquee__track{
+  display:inline-flex;gap:3.2rem;white-space:nowrap;
+  animation:scroll 38s linear infinite;
+  font-family:var(--font-display);text-transform:uppercase;
+  letter-spacing:.18em;font-weight:700;font-size:.95rem;
+}
+.marquee__track span{display:inline-flex;align-items:center;gap:1.6rem}
+.marquee__track span::after{content:"●";color:var(--cheese);font-size:.7rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── section frame ─────────────────────────────────────────── */
+section{width:var(--column);margin-inline:auto;padding-block:clamp(3rem,7vw,6rem);position:relative}
+.kicker{
+  font-family:var(--font-display);text-transform:uppercase;
+  letter-spacing:.32em;font-size:.74rem;font-weight:700;color:var(--brick);
+  margin-bottom:.85rem;display:inline-block;
+}
+.kicker::before{content:"§ ";color:var(--ink-soft);font-family:var(--font-body)}
+h2.section__title{
+  font-size:clamp(2.6rem,7vw,5.4rem);font-weight:900;line-height:.88;letter-spacing:-.02em;
+  margin-bottom:1.6rem;color:var(--ink);
+}
+.section__lede{
+  font-family:var(--font-body);font-size:clamp(1.1rem,1.6vw,1.32rem);
+  line-height:1.6;color:var(--ink-soft);max-width:48rem;
+}
+.section__lede em{font-style:italic;color:var(--ink)}
+
+/* ─── about ─────────────────────────────────────────────────── */
+.about{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:start;
+}
+.about__copy p{margin:0 0 1.1rem;font-size:clamp(1.02rem,1.4vw,1.18rem)}
+.about__copy p:last-child{margin-bottom:0}
+.about__drop::first-letter{
+  font-family:var(--font-display);font-weight:900;font-size:5.6rem;
+  float:left;line-height:.85;margin:.35rem .65rem 0 0;color:var(--brick);
+}
+.facts{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  border:2px solid var(--ink);background:var(--paper-soft);
+  position:relative;
+}
+.facts::after{
+  content:"EST. EARLY '90s";position:absolute;top:-.85rem;left:1.2rem;
+  font-family:var(--font-display);font-weight:800;font-size:.7rem;
+  letter-spacing:.28em;background:var(--paper);padding:0 .55rem;color:var(--brick);
+}
+.fact{padding:1.4rem 1.3rem;border-bottom:1.5px solid var(--rule)}
+.fact:nth-child(odd){border-right:1.5px solid var(--rule)}
+.fact:nth-last-child(-n+2){border-bottom:0}
+.fact__label{
+  font-family:var(--font-display);text-transform:uppercase;
+  letter-spacing:.22em;font-size:.7rem;font-weight:700;color:var(--brick);margin-bottom:.5rem;
+}
+.fact__value{
+  font-family:var(--font-display);font-weight:800;font-size:1.65rem;line-height:1;color:var(--ink);
+}
+.fact__value small{font-family:var(--font-body);font-weight:400;font-size:.86rem;color:var(--ink-soft);display:block;margin-top:.45rem;text-transform:none;letter-spacing:0;font-style:italic}
+
+/* ─── menu (Services page) ──────────────────────────────────── */
+.menu{
+  background:var(--char);color:var(--paper);
+  width:100%;margin-inline:0;
+}
+.menu__inner{width:var(--column);margin-inline:auto}
+.menu .kicker{color:var(--cheese)}
+.menu h2.section__title{color:var(--paper)}
+.menu .section__lede{color:rgba(244,228,188,.78)}
+.menu .section__lede em{color:var(--cheese)}
+.menu__grid{
+  display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(2.4rem,5vw,4.5rem);
+  margin-top:3rem;
+}
+.menu__col h3{
+  font-size:clamp(1.4rem,2.4vw,1.9rem);
+  letter-spacing:.18em;font-weight:800;color:var(--cheese);
+  margin-bottom:1.4rem;
+  padding-bottom:.55rem;border-bottom:1.5px solid rgba(244,228,188,.25);
+}
+.menu__col h3 small{
+  font-family:var(--font-body);font-weight:400;font-size:.78rem;
+  letter-spacing:.04em;text-transform:none;font-style:italic;color:rgba(244,228,188,.6);
+  display:block;margin-top:.45rem;
+}
+.menu__item{
+  display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;
+  padding:.95rem 0;border-bottom:1px dashed rgba(244,228,188,.18);
+}
+.menu__item:last-child{border-bottom:0}
+.menu__item__name{font-family:var(--font-body);font-weight:600;font-size:1.04rem;color:var(--paper)}
+.menu__item__name em{font-weight:400;font-style:italic;color:rgba(244,228,188,.7);display:block;font-size:.88rem;margin-top:.2rem;letter-spacing:.01em}
+.menu__item__size{
+  font-family:var(--font-display);font-weight:700;font-size:.84rem;
+  letter-spacing:.2em;color:var(--cheese);white-space:nowrap;text-transform:uppercase;
+}
+.sizes{
+  margin-top:2.4rem;padding:1.4rem 1.6rem;
+  border:1.5px solid rgba(244,228,188,.3);
+  display:flex;flex-wrap:wrap;gap:1.4rem;align-items:baseline;
+}
+.sizes__label{font-family:var(--font-display);font-weight:800;letter-spacing:.22em;font-size:.78rem;color:var(--cheese);text-transform:uppercase}
+.sizes__list{font-family:var(--font-body);font-size:1rem;color:var(--paper);letter-spacing:.02em}
+.sizes__list b{font-family:var(--font-display);font-weight:800;font-size:1.15rem;letter-spacing:.04em;margin-right:.2rem}
+.menu__note{
+  margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid rgba(244,228,188,.2);
+  font-style:italic;font-size:.96rem;color:rgba(244,228,188,.7);
+}
+
+/* ─── gallery placeholder ───────────────────────────────────── */
+.gallery{position:relative}
+.gallery__grid{
+  display:grid;grid-template-columns:repeat(6,1fr);gap:.65rem;margin-top:2.4rem;
+  grid-auto-rows:11.5rem;
+}
+.gallery__cell{
+  background:var(--paper-deep);
+  border:1.5px solid var(--rule);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);text-transform:uppercase;letter-spacing:.24em;
+  font-size:.72rem;font-weight:700;color:var(--ink-soft);
+  position:relative;overflow:hidden;
+}
+.gallery__cell::after{
+  content:"";position:absolute;inset:.5rem;border:1px dashed rgba(26,15,10,.25);
+}
+.gallery__cell.c-1{grid-column:span 3;grid-row:span 2}
+.gallery__cell.c-2{grid-column:span 3}
+.gallery__cell.c-3{grid-column:span 2}
+.gallery__cell.c-4{grid-column:span 1}
+.gallery__cell.c-5{grid-column:span 3;grid-row:span 1}
+.gallery__cell.c-6{grid-column:span 3}
+.gallery__cell .gallery__num{
+  position:absolute;top:.55rem;left:.75rem;font-size:.62rem;letter-spacing:.18em;color:var(--brick);
+}
+
+/* ─── contact ───────────────────────────────────────────────── */
+.contact{
+  background:var(--brick);color:var(--paper-soft);width:100%;margin-inline:0;
+}
+.contact__inner{width:var(--column);margin-inline:auto}
+.contact .kicker{color:var(--paper-soft);opacity:.75}
+.contact h2.section__title{color:var(--paper-soft)}
+.contact .section__lede{color:rgba(251,241,214,.85);max-width:42rem}
+.contact .section__lede em{color:var(--cheese)}
+.contact__grid{
+  display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(2rem,4vw,3.6rem);
+  margin-top:2.8rem;
+}
+.contact__details{
+  display:flex;flex-direction:column;gap:1.6rem;
+}
+.contact__row{
+  border-top:1.5px solid rgba(251,241,214,.3);padding-top:1.1rem;
+}
+.contact__row:first-child{border-top:0;padding-top:0}
+.contact__row__label{
+  font-family:var(--font-display);text-transform:uppercase;
+  letter-spacing:.28em;font-size:.72rem;font-weight:700;
+  color:var(--cheese);margin-bottom:.55rem;
+}
+.contact__row__value{
+  font-family:var(--font-display);font-weight:800;font-size:1.65rem;line-height:1.1;color:var(--paper-soft);
+}
+.contact__row__value a{text-decoration:none;border-bottom:2px solid rgba(244,228,188,.3);padding-bottom:.1rem;transition:border-color .2s}
+.contact__row__value a:hover{border-color:var(--cheese)}
+.contact__row__value small{
+  font-family:var(--font-body);font-weight:400;font-size:.92rem;font-style:italic;color:rgba(251,241,214,.7);
+  display:block;margin-top:.45rem;text-transform:none;letter-spacing:0;
+}
+.hours{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1.4rem;font-family:var(--font-body);font-size:1rem;line-height:1.5;margin-top:.45rem}
+.hours dt{font-family:var(--font-display);font-weight:700;letter-spacing:.14em;font-size:.84rem;text-transform:uppercase;color:var(--paper-soft);align-self:baseline}
+.hours dd{margin:0;color:rgba(251,241,214,.85)}
+.hours dd.closed{color:rgba(251,241,214,.55);font-style:italic}
+.map{
+  border:3px solid var(--ink);background:var(--ink);overflow:hidden;
+  min-height:22rem;position:relative;
+}
+.map iframe{width:100%;height:100%;min-height:22rem;border:0;display:block;filter:saturate(.85) contrast(.95)}
+
+/* ─── footer ────────────────────────────────────────────────── */
+footer{
+  background:var(--ink);color:var(--paper);
+}
+.footer__inner{
+  width:var(--column);margin-inline:auto;
+  padding-block:3rem 2.4rem;
+  display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end;
+}
+.footer__mark{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(3rem,6vw,5rem);line-height:.85;letter-spacing:-.02em;
+  text-transform:uppercase;color:var(--paper);
+}
+.footer__mark .apos{color:var(--cheese)}
+.footer__meta{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.2em;font-size:.72rem;font-weight:700;text-align:right;color:rgba(244,228,188,.7);line-height:1.8}
+.footer__rule{height:1.5px;background:rgba(244,228,188,.18);margin-block:1.4rem}
+.footer__fine{
+  width:var(--column);margin-inline:auto;
+  padding-bottom:1.8rem;
+  font-family:var(--font-body);font-style:italic;font-size:.82rem;color:rgba(244,228,188,.5);
+  display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+}
+
+/* ─── nav anchors ───────────────────────────────────────────── */
+.nav{display:none}
+@media (min-width:880px){
+  .nav{display:flex;gap:1.6rem;font-family:var(--font-display);text-transform:uppercase;letter-spacing:.22em;font-size:.76rem;font-weight:700}
+  .nav a{text-decoration:none;color:var(--ink-soft);transition:color .2s;position:relative}
+  .nav a:hover{color:var(--brick)}
+  .nav a::after{content:"";position:absolute;left:0;right:0;bottom:-.45rem;height:2px;background:var(--brick);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+  .nav a:hover::after{transform:scaleX(1)}
+}
+
+/* ─── mobile ────────────────────────────────────────────────── */
+@media (max-width:880px){
+  .topbar__inner{flex-direction:column;align-items:flex-start;gap:.65rem;padding-block:.7rem}
+  .topbar__addr{font-size:.7rem;letter-spacing:.12em}
+  .hero{padding-block:1.6rem 2.4rem}
+  .hero__stamp{flex-direction:column;align-items:flex-start;gap:1rem}
+  .hero__tagline{grid-template-columns:1fr;gap:1rem;padding-top:1.2rem;margin-top:1.8rem}
+  .about{grid-template-columns:1fr;gap:2.2rem}
+  .menu__grid{grid-template-columns:1fr;gap:2.4rem}
+  .gallery__grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:9rem}
+  .gallery__cell.c-1,.gallery__cell.c-2,.gallery__cell.c-3,.gallery__cell.c-4,.gallery__cell.c-5,.gallery__cell.c-6{grid-column:span 2;grid-row:span 1}
+  .gallery__cell.c-1{grid-row:span 2}
+  .contact__grid{grid-template-columns:1fr;gap:2rem}
+  .footer__inner{grid-template-columns:1fr;align-items:flex-start;gap:1.4rem}
+  .footer__meta{text-align:left}
+  .facts{grid-template-columns:1fr}
+  .fact:nth-child(odd){border-right:0}
+  .fact{border-bottom:1.5px solid var(--rule)}
+  .fact:last-child{border-bottom:0}
+}
+@media (max-width:520px){
+  .hero__name{font-size:clamp(3.4rem,18vw,5.4rem)}
+  .hero__stamp .pizza{font-size:1.45rem;letter-spacing:.36em;padding:.36rem 1rem .3rem 1.36rem}
+}
+</style>
+</head>
+<body>
+
+<!-- top bar -->
+<header class="topbar">
+  <div class="topbar__inner">
+    <div class="topbar__addr">
+      <span><b>75 Lynn Road</b> · Gaywood</span>
+      <span class="dot"></span>
+      <span>King's Lynn · PE30 4PR</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel-pill" href="tel:+441553761812" aria-label="Call Galliano's Pizza on 01553 761812">01553 761812</a>
+  </div>
+</header>
+
+<!-- hero (Home) -->
+<main>
+<section class="hero" id="top" aria-labelledby="hero-name">
+  <div class="hero__est">Independent · Gaywood · Over 30 years</div>
+  <h1 class="hero__name" id="hero-name">Galliano<span class="apos">'</span>s</h1>
+  <div class="hero__stamp">
+    <span class="pizza">Pizza</span>
+    <span class="gv">A small independent takeaway, generous with the cheese, dough made fresh every day.</span>
+  </div>
+
+  <div class="hero__tagline">
+    <div>Fresh Dough Daily<span>Hand-prepared on the premises before every service — never a frozen base.</span></div>
+    <div>Deep Pan as Standard<span>Seven, ten, thirteen, fourteen inch — and we don't skimp on toppings.</span></div>
+    <div>Gluten-Free Option<span>Same care, same toppings — a base for those who can't have wheat.</span></div>
+  </div>
+
+  <div class="hero__cta">
+    <a class="btn btn--primary" href="tel:+441553761812">
+      Call to order
+      <span class="arrow" aria-hidden="true">→</span>
+    </a>
+    <a class="btn btn--ghost" href="#menu">See the menu</a>
+  </div>
+</section>
+</main>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>The Quatto</span>
+    <span>Italian</span>
+    <span>Hot &amp; Spicy</span>
+    <span>Formaggi</span>
+    <span>Neptune</span>
+    <span>Vegetarian</span>
+    <span>Calzone</span>
+    <span>Pizza Pie</span>
+    <span>Master Mix</span>
+    <span>Open Wed–Sat</span>
+    <span>Last orders 30 min before close</span>
+    <span>The Quatto</span>
+    <span>Italian</span>
+    <span>Hot &amp; Spicy</span>
+    <span>Formaggi</span>
+    <span>Neptune</span>
+    <span>Vegetarian</span>
+    <span>Calzone</span>
+    <span>Pizza Pie</span>
+    <span>Master Mix</span>
+    <span>Open Wed–Sat</span>
+    <span>Last orders 30 min before close</span>
+  </div>
+</div>
+
+<!-- about -->
+<section id="about" aria-labelledby="about-title">
+  <span class="kicker">About</span>
+  <h2 class="section__title" id="about-title">The takeaway that's been here longer than half its customers.</h2>
+  <div class="about" style="margin-top:2.4rem">
+    <div class="about__copy">
+      <p class="about__drop">Galliano's has been making pizza on Lynn Road in Gaywood for more than thirty years. Independent. Family-feel. A short walk from the centre of King's Lynn, on the eastern side of town, with a steady rotation of regulars who already know what they want before they ring.</p>
+      <p>The dough is prepared from scratch on the premises every day before service. The cheese sits all the way out to the edge of the base — the corner crust toasts into something close to a cheese-on-toast, which is the bit a lot of regulars actually come back for.</p>
+      <p>Deep pan as standard, in four sizes from a personal seven-inch up to a fourteen-inch sharer. Six signature pizzas, a wrap, a pie, a calzone, and a gluten-free base option that's prepared with the same care. Side orders, pasta, bakes, kids' menu, meal deals, desserts. Nothing on the menu is trying to be clever. It's all trying to be good.</p>
+    </div>
+    <aside class="facts" aria-label="Galliano's at a glance">
+      <div class="fact">
+        <div class="fact__label">Trading since</div>
+        <div class="fact__value">30+ yrs<small>Independent · Gaywood</small></div>
+      </div>
+      <div class="fact">
+        <div class="fact__label">Pizza sizes</div>
+        <div class="fact__value">7" → 14"<small>Deep pan as standard</small></div>
+      </div>
+      <div class="fact">
+        <div class="fact__label">Signature pizzas</div>
+        <div class="fact__value">Six<small>From the Quatto to the Neptune</small></div>
+      </div>
+      <div class="fact">
+        <div class="fact__label">Dough</div>
+        <div class="fact__value">Daily<small>Prepared on the premises before every service</small></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- menu (Services page) -->
+<section class="menu" id="menu" aria-labelledby="menu-title">
+  <div class="menu__inner">
+    <span class="kicker">Menu · Services</span>
+    <h2 class="section__title" id="menu-title">A short, honest menu. <em style="color:var(--cheese)">Generous with the cheese.</em></h2>
+    <p class="section__lede">Six chef's signature pizzas, served deep pan in four sizes. Wraps, pies and calzones. Pasta, bakes, sides and kids' portions. <em>Prices and full ingredient listings on request when you call.</em></p>
+
+    <div class="menu__grid">
+      <div class="menu__col">
+        <h3>Chef's Suggestions <small>Six signature pizzas · 7″, 10″, 13″, 14″</small></h3>
+
+        <div class="menu__item">
+          <div class="menu__item__name">The Quatto<em>Four-quarter classic.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Italian<em>Old-school topping pile.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Hot &amp; Spicy<em>Not for the faint hearted.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Formaggi<em>For the cheese-on-toast crust fans.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Neptune<em>From the sea — by name and topping.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Vegetarian<em>Generous on the veg, generous on the cheese.</em></div>
+          <div class="menu__item__size">Signature</div>
+        </div>
+
+        <div class="sizes">
+          <span class="sizes__label">Sizes</span>
+          <span class="sizes__list"><b>7″</b> personal · <b>10″</b> small · <b>13″</b> medium · <b>14″</b> large</span>
+        </div>
+      </div>
+
+      <div class="menu__col">
+        <h3>Specialities &amp; Beyond <small>Wraps, pies, calzones, pasta, sides, kids' &amp; meal deals</small></h3>
+
+        <div class="menu__item">
+          <div class="menu__item__name">Pizza Wrap<em>Now that's a wrap.</em></div>
+          <div class="menu__item__size">Speciality</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Pizza Pie<em>Sealed top, all the filling.</em></div>
+          <div class="menu__item__size">Speciality</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Calzone<em>Folded, baked, ready.</em></div>
+          <div class="menu__item__size">Speciality</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Master Mix<em>Big-sharer combo.</em></div>
+          <div class="menu__item__size">Speciality</div>
+        </div>
+
+        <div class="menu__item">
+          <div class="menu__item__name">Pasta &amp; Bakes<em>Lasagne, chicken-bacon pasta, potato bakes.</em></div>
+          <div class="menu__item__size">Kitchen</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Sides<em>Fries, garlic bread, onion rings, coleslaw, mozzarella sticks, wings.</em></div>
+          <div class="menu__item__size">Kitchen</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Children's Menu<em>Each dish with fries &amp; a small fruit juice.</em></div>
+          <div class="menu__item__size">Kids'</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Meal Deals<em>From Solo up to the Awesome Foursome.</em></div>
+          <div class="menu__item__size">Deals</div>
+        </div>
+        <div class="menu__item">
+          <div class="menu__item__name">Desserts<em>Apple pie, choc fudge cake, toffee crunch pie, NY cheesecake.</em></div>
+          <div class="menu__item__size">Sweet</div>
+        </div>
+
+        <p class="menu__note">Gluten-free pizza base is available on request — prepared with the same care and same toppings. Last orders are taken 30 minutes before closing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- gallery placeholder -->
+<section id="gallery" aria-labelledby="gallery-title">
+  <span class="kicker">Gallery</span>
+  <h2 class="section__title" id="gallery-title">Photos are on the way.</h2>
+  <p class="section__lede">A shop window's worth of recent bakes, oven shots and signature pizzas — to be added as the kitchen sends them through. <em>For now, the layout is reserved.</em></p>
+
+  <div class="gallery__grid" role="presentation">
+    <div class="gallery__cell c-1"><span class="gallery__num">01</span>Cheese-edge crust</div>
+    <div class="gallery__cell c-2"><span class="gallery__num">02</span>Fresh dough · daily prep</div>
+    <div class="gallery__cell c-3"><span class="gallery__num">03</span>14″ Master Mix</div>
+    <div class="gallery__cell c-4"><span class="gallery__num">04</span>Calzone</div>
+    <div class="gallery__cell c-5"><span class="gallery__num">05</span>Hot &amp; Spicy</div>
+    <div class="gallery__cell c-6"><span class="gallery__num">06</span>The Quatto</div>
+  </div>
+</section>
+
+<!-- contact -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact__inner">
+    <span class="kicker">Contact</span>
+    <h2 class="section__title" id="contact-title">Ring through. Or come round.</h2>
+    <p class="section__lede">Phone is the fastest. Last orders are taken thirty minutes before close — call ahead if it's a big one and we'll get it as close to your preferred time as we can.</p>
+
+    <div class="contact__grid">
+      <div class="contact__details">
+        <div class="contact__row">
+          <div class="contact__row__label">Phone</div>
+          <div class="contact__row__value"><a href="tel:+441553761812">01553 761812</a><small>Call to order, ask about gluten-free, or pre-book a meal deal.</small></div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__row__label">Email</div>
+          <div class="contact__row__value"><a href="mailto:gallianos@sky.com">gallianos@sky.com</a></div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__row__label">Find us</div>
+          <div class="contact__row__value">75 Lynn Road<small>Gaywood · King's Lynn · PE30 4PR</small></div>
+        </div>
+        <div class="contact__row">
+          <div class="contact__row__label">Opening hours</div>
+          <dl class="hours">
+            <dt>Mon</dt><dd class="closed">Closed</dd>
+            <dt>Tue</dt><dd class="closed">Closed</dd>
+            <dt>Wed</dt><dd>5:00pm – 10:00pm</dd>
+            <dt>Thu</dt><dd>5:00pm – 10:00pm</dd>
+            <dt>Fri</dt><dd>5:00pm – 11:30pm</dd>
+            <dt>Sat</dt><dd>4:00pm – 11:30pm</dd>
+            <dt>Sun</dt><dd class="closed">Closed</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div>
+        <div class="map" aria-label="Map: 75 Lynn Road, Gaywood, King's Lynn, PE30 4PR">
+          <iframe
+            title="Galliano's Pizza — 75 Lynn Road, Gaywood, King's Lynn, PE30 4PR"
+            src="https://www.google.com/maps?q=75+Lynn+Road,+Gaywood,+King%27s+Lynn,+PE30+4PR&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="footer__inner">
+    <div class="footer__mark">Galliano<span class="apos">'</span>s<br>Pizza</div>
+    <div class="footer__meta">
+      75 Lynn Road · Gaywood<br>
+      King's Lynn · PE30 4PR<br>
+      <a href="tel:+441553761812" style="text-decoration:none;color:var(--cheese)">01553 761812</a><br>
+      <a href="mailto:gallianos@sky.com" style="text-decoration:none;color:rgba(244,228,188,.7)">gallianos@sky.com</a>
+    </div>
+  </div>
+  <div class="footer__rule" role="presentation"></div>
+  <div class="footer__fine">
+    <span>Independent takeaway · Over thirty years on Lynn Road.</span>
+    <span>Last orders 30 min before close. Closed Mon, Tue &amp; Sun.</span>
+  </div>
+</footer>
+
+</body>
+</html>
